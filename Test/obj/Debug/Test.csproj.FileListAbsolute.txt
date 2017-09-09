@@ -1,0 +1,16 @@
+C:\MyGit\Payroll\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\MyGit\Payroll\Test\bin\Debug\NUnit3.TestAdapter.dll
+C:\MyGit\Payroll\Test\bin\Debug\nunit.engine.dll
+C:\MyGit\Payroll\Test\bin\Debug\nunit.engine.api.dll
+C:\MyGit\Payroll\Test\bin\Debug\Mono.Cecil.dll
+C:\MyGit\Payroll\Test\bin\Debug\Mono.Cecil.Pdb.dll
+C:\MyGit\Payroll\Test\bin\Debug\Mono.Cecil.Mdb.dll
+C:\MyGit\Payroll\Test\bin\Debug\Mono.Cecil.Rocks.dll
+C:\MyGit\Payroll\Test\bin\Debug\Test.dll
+C:\MyGit\Payroll\Test\bin\Debug\Test.pdb
+C:\MyGit\Payroll\Test\bin\Debug\nunit.framework.dll
+C:\MyGit\Payroll\Test\bin\Debug\nunit.framework.xml
+C:\MyGit\Payroll\Test\obj\Debug\Test.dll
+C:\MyGit\Payroll\Test\obj\Debug\Test.pdb
+C:\MyGit\Payroll\Test\bin\Debug\Payroll.Domain.dll
+C:\MyGit\Payroll\Test\bin\Debug\Payroll.Domain.pdb

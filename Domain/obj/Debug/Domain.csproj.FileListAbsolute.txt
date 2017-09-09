@@ -1,0 +1,5 @@
+C:\MyGit\Payroll\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\MyGit\Payroll\Domain\bin\Debug\Domain.dll
+C:\MyGit\Payroll\Domain\bin\Debug\Domain.pdb
+C:\MyGit\Payroll\Domain\obj\Debug\Domain.dll
+C:\MyGit\Payroll\Domain\obj\Debug\Domain.pdb
