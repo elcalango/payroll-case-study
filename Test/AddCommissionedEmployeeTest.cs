@@ -21,8 +21,8 @@ namespace Test
             Assert.IsTrue(pc is CommissionedClassification);
 
             CommissionedClassification cc = pc as CommissionedClassification;
-            Assert.AreEqual(500.0, cc.MonthlySalary, .001);
-            Assert.AreEqual(10.0, cc.CommonRate, .001);
+            Assert.AreEqual(500.0, cc.BaseRate, .001);
+            Assert.AreEqual(10.0, cc.CommissionRate, .001);
 
             PaymentSchedule ps = e.Schedule;
             Assert.IsTrue(ps is BiweeklySchedule);

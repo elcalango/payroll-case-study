@@ -5,21 +5,21 @@ namespace Payroll.Domain
     public class SalesReceipt
     {
         private readonly DateTime date;
-        private readonly double amount;
+        private readonly double saleAmount;
 
-        public SalesReceipt(DateTime date, double amount)
+        public SalesReceipt(DateTime date, double saleAmount)
         {
             this.date = date;
-            this.amount = amount;
+            this.saleAmount = saleAmount;
         }
 
         public DateTime Date
         {
             get { return date; }
         }
-        public double Amount
+        public double SaleAmount
         {
-            get { return amount; }
+            get { return saleAmount; }
         }
 
     }

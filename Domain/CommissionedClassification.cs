@@ -1,21 +1,39 @@
 ﻿using System;
+using System.Collections;
 
 namespace Payroll.Domain
 {
     public class CommissionedClassification : PaymentClassification
     {
-        public double MonthlySalary { get; set; }
-        public double CommonRate { get; set; }
+        private readonly double baseRate;
+        private readonly double commissionRate;
 
-        public CommissionedClassification(double monthlySalary, double commonRate)
+        private Hashtable salesReceipts = new Hashtable();
+        
+        public double BaseRate
         {
-            this.MonthlySalary = monthlySalary;
-            this.CommonRate = commonRate;
+            get { return baseRate; }
+        }
+
+        public double CommissionRate
+        {
+            get { return commissionRate; }
+        }
+
+        public CommissionedClassification(double baseRate, double commissionRate)
+        {
+            this.baseRate = baseRate;
+            this.commissionRate = commissionRate;
         }
 
         public void AddSalesReceipt(SalesReceipt salesReceipt)
         {
-            throw new NotImplementedException();
+            salesReceipts[salesReceipt.Date] = salesReceipt;
+        }
+
+        public SalesReceipt GetSalesReceipt(DateTime time)
+        {
+            return salesReceipts[time] as SalesReceipt;
         }
     }
 }

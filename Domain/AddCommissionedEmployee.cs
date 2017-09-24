@@ -5,17 +5,17 @@ namespace Payroll.Domain
     public class AddCommissionedEmployee : AddEmployTransaction
     {
         private readonly double monthlySalary;
-        private readonly double commonRate;
-        public AddCommissionedEmployee(int empId, string name, string address, double monthlySalary, double commonRate) 
+        private readonly double commissionRate;
+        public AddCommissionedEmployee(int empId, string name, string address, double monthlySalary, double commissionRate) 
             : base(empId, name, address)
         {
             this.monthlySalary = monthlySalary;
-            this.commonRate = commonRate;
+            this.commissionRate = commissionRate;
         }
 
         protected override PaymentClassification MakeClassification()
         {
-            return new CommissionedClassification(500.0, 10.0);
+            return new CommissionedClassification(monthlySalary, commissionRate);
         }
 
         protected override PaymentSchedule MakeSchedule()
