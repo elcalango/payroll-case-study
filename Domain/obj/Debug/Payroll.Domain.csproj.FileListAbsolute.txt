@@ -3,3 +3,8 @@ C:\MyGit\Payroll\Domain\bin\Debug\Payroll.Domain.pdb
 C:\MyGit\Payroll\Domain\obj\Debug\Payroll.Domain.csprojResolveAssemblyReference.cache
 C:\MyGit\Payroll\Domain\obj\Debug\Payroll.Domain.dll
 C:\MyGit\Payroll\Domain\obj\Debug\Payroll.Domain.pdb
+C:\MyGitRepositories\payroll-case-study\Domain\bin\Debug\Payroll.Domain.dll
+C:\MyGitRepositories\payroll-case-study\Domain\bin\Debug\Payroll.Domain.pdb
+C:\MyGitRepositories\payroll-case-study\Domain\obj\Debug\Payroll.Domain.csproj.CoreCompileInputs.cache
+C:\MyGitRepositories\payroll-case-study\Domain\obj\Debug\Payroll.Domain.dll
+C:\MyGitRepositories\payroll-case-study\Domain\obj\Debug\Payroll.Domain.pdb
