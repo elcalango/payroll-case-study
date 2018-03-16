@@ -23,9 +23,19 @@ namespace Payroll.Domain
             employees.Remove(id);
         }
 
+        public static Employee GetUnionMember(int memberId)
+        {
+            return employees[memberId] as Employee;
+        }
+
         public static Employee GetEmployee(int empId)
         {
             return employees[empId] as Employee;
+        }
+
+        public static void AddUnionMember(int memberId, Employee e)
+        {
+            employees[memberId] = e;
         }
     }
 }
