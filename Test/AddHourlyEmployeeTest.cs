@@ -6,14 +6,22 @@ namespace Test
     [TestFixture]
     public class AddHourlyEmployeeTest
     {
+        private IPayrollDatabase database;
+
+        [SetUp]
+        public void SetUp()
+        {
+            database = new InMemoryPayrollDatabase();
+        }
+
         [Test]
         public void TestAddHourlyEmployee()
         {
             int empId = 2;
-            AddHourlyEmployee t = new AddHourlyEmployee(empId, "Neto", "Santa Barbara D' Oeste", 50.0);
+            AddHourlyEmployee t = new AddHourlyEmployee(empId, "Neto", "Santa Barbara D' Oeste", 50.0, database);
             t.Execute();
 
-            Employee e = PayrollDatabase.GetEmployee(empId);
+            Employee e = database.GetEmployee(empId);
             Assert.AreEqual("Neto", e.Name);
 
             PaymentClassification pc = e.Classification;

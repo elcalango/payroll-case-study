@@ -6,8 +6,8 @@ namespace Payroll.Domain
     {
         private readonly double monthlySalary;
         private readonly double commissionRate;
-        public AddCommissionedEmployee(int empId, string name, string address, double monthlySalary, double commissionRate) 
-            : base(empId, name, address)
+        public AddCommissionedEmployee(int empId, string name, string address, double monthlySalary, double commissionRate, IPayrollDatabase database) 
+            : base(empId, name, address, database)
         {
             this.monthlySalary = monthlySalary;
             this.commissionRate = commissionRate;

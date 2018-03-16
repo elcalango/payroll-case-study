@@ -6,21 +6,29 @@ namespace Test
     [TestFixture]
     public class DeleteEmployeeTest
     {
+        private IPayrollDatabase database;
+
+        [SetUp]
+        public void SetUp()
+        {
+            database = new InMemoryPayrollDatabase();
+        }
+
         [Test]
         public void TestDeleteEmployee()
         {
             int empId = 4;
 
-            AddCommissionedEmployee t = new AddCommissionedEmployee(  empId, "Bill", "Home", 2500, 3.2);
+            AddCommissionedEmployee t = new AddCommissionedEmployee(  empId, "Bill", "Home", 2500, 3.2, database);
             t.Execute();
 
-            Employee e = PayrollDatabase.GetEmployee(empId);
+            Employee e = database.GetEmployee(empId);
             Assert.IsNotNull(e);
 
-            DeleteEmployeeTransaction dt = new DeleteEmployeeTransaction(empId);
+            DeleteEmployeeTransaction dt = new DeleteEmployeeTransaction(empId, database);
             dt.Execute();
 
-            e = PayrollDatabase.GetEmployee(empId);
+            e = database.GetEmployee(empId);
             Assert.IsNull(e);
         }
     }

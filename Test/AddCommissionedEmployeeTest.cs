@@ -6,15 +6,22 @@ namespace Test
     [TestFixture]
     public class AddCommissionedEmployeeTest
     {
+        private IPayrollDatabase database;
+
+        [SetUp]
+        public void SetUp()
+        {
+            database = new InMemoryPayrollDatabase();
+        }
         [Test]
         public void TestAddCommissionedEmployee()
         {
             int empId = 3;
 
-            AddCommissionedEmployee t = new AddCommissionedEmployee(empId, "Comissionado", "Endereço", 500.00, 10.00);
+            AddCommissionedEmployee t = new AddCommissionedEmployee(empId, "Comissionado", "Endereço", 500.00, 10.00, database);
             t.Execute();
 
-            Employee e = PayrollDatabase.GetEmployee(empId);
+            Employee e = database.GetEmployee(empId);
             Assert.AreEqual("Comissionado", e.Name);
 
             PaymentClassification pc = e.Classification;

@@ -12,7 +12,8 @@ namespace Payroll.Domain
         private readonly string name;
         private readonly string address;
 
-        public AddEmployTransaction(int empId, string name, string address)
+        public AddEmployTransaction(int empId, string name, string address, IPayrollDatabase database) 
+            : base(database)
         {
             this.empId = empId;
             this.name = name;
@@ -23,7 +24,7 @@ namespace Payroll.Domain
 
         protected abstract PaymentSchedule MakeSchedule();
 
-        public void Execute()
+        public override void Execute()
         {
             PaymentClassification pc = MakeClassification();
             PaymentSchedule ps = MakeSchedule();
@@ -33,7 +34,7 @@ namespace Payroll.Domain
             e.Classification = pc;
             e.Schedule = ps;
             e.Method = pm;
-            PayrollDatabase.AddEmployee(empId, e);
+            database.AddEmployee(e);
         }
     }
 }

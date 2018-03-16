@@ -1,8 +1,14 @@
 ﻿namespace Payroll.Domain
 {
-    public interface Transaction
+    public abstract class Transaction
     {
-        void Execute();
+        protected readonly IPayrollDatabase database;
+        public abstract void Execute();
+
+        public Transaction (IPayrollDatabase database)
+        {
+            this.database = database;
+        }
        
     }
 }

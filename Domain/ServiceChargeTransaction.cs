@@ -2,22 +2,23 @@
 
 namespace Payroll.Domain
 {
-    public class ServiceChargeTransaction 
+    public class ServiceChargeTransaction : Transaction
     {
         private readonly int memberId;
         private readonly DateTime time;
         private readonly Double charge;
 
-        public ServiceChargeTransaction(int memberId, DateTime dateTime, Double charge)
+        public ServiceChargeTransaction(int memberId, DateTime dateTime, Double charge, IPayrollDatabase database)
+            : base(database)
         {
             this.memberId = memberId;
             this.time = dateTime;
             this.charge = charge;
         }
 
-        public void Execute()
+        public override void Execute()
         {
-            Employee e = PayrollDatabase.GetUnionMember(memberId);
+            Employee e = database.GetUnionMember(memberId);
 
             if (e != null)
             {
