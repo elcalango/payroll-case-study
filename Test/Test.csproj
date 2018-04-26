@@ -51,7 +51,8 @@
     <Compile Include="AddHourlyEmployeeTest.cs" />
     <Compile Include="AddSalarieEmployeeTest.cs" />
     <Compile Include="AddServiceChargeTest.cs" />
-    <Compile Include="ChangeAddressTransactionTest .cs" />
+    <Compile Include="ChangeHourlyTransactionTest.cs" />
+    <Compile Include="ChangeAddressTransactionTest.cs" />
     <Compile Include="ChangeNameTransactionTest.cs" />
     <Compile Include="DeleteEmployeeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
