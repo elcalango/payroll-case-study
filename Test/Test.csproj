@@ -51,13 +51,12 @@
     <Compile Include="AddHourlyEmployeeTest.cs" />
     <Compile Include="AddSalarieEmployeeTest.cs" />
     <Compile Include="AddServiceChargeTest.cs" />
+    <Compile Include="ChangeAddressTransactionTest .cs" />
+    <Compile Include="ChangeNameTransactionTest.cs" />
     <Compile Include="DeleteEmployeeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesReceiptTransactionTest.cs" />
     <Compile Include="TimeCardTransactionTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Payroll.Domain.csproj">
@@ -67,6 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
